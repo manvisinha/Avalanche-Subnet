@@ -8,23 +8,23 @@ This project implements a basic ERC-20 token named Cherry (CHY) with additional 
 
 ### ERC20
 
-The ERC20 contract defines the standard interface for an ERC-20 token. It includes functions for transferring tokens, approving spending, and handling minting and burning. Additionally, the contract supports the `totalSupply`, `balanceOf`, and `allowance` queries.
+The ERC20 token handles actions like sending tokens, giving permission for spending, and managing the creation and removal of tokens. Additionally, it provides information about the total supply, individual balances, and allowed transactions.
 
 #### Functions
 
 - `transfer`: Transfer tokens from the sender to a recipient.
 - `approve`: Approve another address to spend tokens on behalf of the sender.
 - `transferFrom`: Transfer tokens from one address to another using the approved spender.
-- `mint`: Mint new tokens, increasing the total supply.
-- `burn`: Burn tokens, decreasing the total supply.
+- `mint`: Make new tokens, adding to the total amount available.
+- `burn`: Remove tokens from circulation, reducing the total amount available.
 
 ### IERC20 Interface
 
-The IERC20 interface declares the external functions and events required by the ERC-20 standard. It is implemented by the ERC20 contract.
+The IERC20 Interface lists the actions and events required for the ERC-20 standard. The ERC20 contract follows and carries out these guidelines.
 
 ### Vault
 
-The Vault contract facilitates the secure deposit and withdrawal of tokens. Users can deposit tokens into the Vault, receiving shares in return. These shares can be later redeemed for the deposited tokens.
+The Vault contract simplifies the safe deposit and withdrawal of tokens. Users deposit tokens into the Vault, getting shares in exchange. Later, these shares can be traded back for the initially deposited tokens.
 
 #### Functions
 
@@ -37,7 +37,7 @@ A subnet refers to a subset or partition of the overall network that operates se
 
 Key characteristics of subnets include:
 
-- **Customization:** Each subnet can have its own set of rules, validators, and virtual machines, tailoring it for specific use cases or applications.
+- **Tailoring to Specific Needs**: Each subnet has the flexibility to establish unique rules, validators, and virtual machines, making it suitable for specific uses or applications.
 - **Consensus Mechanism:** Subnets can use different consensus mechanisms, providing flexibility in how transactions are confirmed.
 - **Interoperability:** Subnets can interact with each other, enabling seamless movement of assets and data between different parts of the network.
 - **Security Isolation:** Subnets provide security isolation, containing potential issues or attacks within a specific subnet.
